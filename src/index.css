@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* =========================
+   GLOBAL BASE STYLES
+   ========================= */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #050b1a; /* exact deep dark blue */
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   DOT BACKGROUND
+   ========================= */
+
+.dot {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: dot-glow 8s ease-in-out infinite;
+}
+
+/* =========================
+   DOT GLOW ANIMATION
+   ========================= */
+
+@keyframes dot-glow {
+  0%,
+  100% {
+    opacity: 0.25;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  }
+}
